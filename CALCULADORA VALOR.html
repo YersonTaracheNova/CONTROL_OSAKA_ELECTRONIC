@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="CSS/EstCalvalor.css">
+</head>
+<body>
+<nav class="titulo">
+<h1>CALCULADORA COSTO/GANANCIAS</h1>
+</nav>
+<Br></Br>
+<SCript>
+  function calcular()
+  {
+    var valorcompra = document.FrmCalValor.compra.value;
+    var gananciaventa = document.FrmCalValor.utilidad.value;
+    var IVAimpuesto = document.FrmCalValor.iva.value;
+    var Vventa = document.FrmCalValor.venta.value;
+    var Gananciaventa = document.FrmCalValor.ganancia.value;    
+    gananciapago = (parseFloat(valorcompra)/100)*parseFloat(gananciaventa);   
+    var pagoiva = ((parseFloat(valorcompra) + parseFloat(gananciapago))/100) * parseFloat(IVAimpuesto);
+    Vventa= parseFloat(valorcompra) + parseFloat(gananciapago) + parseFloat(pagoiva);
+    document.FrmCalValor.venta.value = Vventa;
+    document.FrmCalValor.ganancia.value = gananciapago;    
+  }
+</SCript>
+<div class="container"> 
+  <h2>Operaciones</h2> 
+  <form class="form-horizontal" name="FrmCalValor" action="CALCULADORA VALOR.html" role="form" method="POST"> 
+    <div class="form"> 
+      <label class="alin">Valor de compra </label> 
+      <input type="number" class="form-control"  id="compra" placeholder="Ingrese el valor de la compra" name="compra" > 
+    </div> 
+    <div class="form"> 
+      <label class="alin">% de utilidad o ganancia </label>               
+      <input type="text" class="form-control" id="utilidad"  placeholder="ingrese el % de utilidad" name="utilidad"> 
+    </div> 
+    <div class="form"> 
+      <label class="alin">% IVA </label>       
+      <input type="text" class="form-control" id="iva" placeholder="ingrese el % del IVA" name="iva"> 
+    </div> 
+    <div class="btnp">
+      <input type="button" class="button" name="CALCULAR" value="CALCULAR" onclick="calcular()" class="Boton_calcular">                         
+      <input type="reset" class="button" name="BORRARDATOS"  value="BORRAR DATOS"  class="boton_borrar">  
+    </div>  
+    <div class="form"> 
+      <label class="alin">Valor venta $ </label> 
+      <input type="text" class="form-control" id="venta" placeholder="Precio de venta" name="venta"> 
+    </div> 
+    <div class="form"> 
+      <label class="alin"> Ganancia $ </label>               
+      <input type="text" class="form-control" id="ganancia" placeholder="Ganancia total" name="ganancia"> 
+    </div>  
+  </form>   
+  <div class="btnp">    
+  <a class= "btn btn-primary" href="index.html"> <b>Pagina Principal</b></a>
+  </div>
+</div>      
+</body>
+</html>

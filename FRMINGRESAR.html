@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>INVENTARIO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="CSS/Estingresar.css">
+</head>
+<body>
+<div class="container">
+  <center><h2><b>INGRESAR PRODUCTO</b></h2></center>
+  &nbsp 
+  <form class="form-horizontal"action="FRMINGRESAR.php" role="form" method="POST">    
+    <div class="form-group">
+      <label><b>Codigo SKU:</b></label>
+      <input type="text" class="form-control" name="codigo" placeholder="Ingresar codigo del producto">
+    </div>
+    <div class="form-group">
+      <label><b>Descripcion:</b></label>
+      <input type="text" class="form-control" name="descripcion" placeholder="Ingresar descripcion del producto">
+    </div>
+    <div class="form-group">
+      <label><b>Proveedor:</b></label>
+      <input type="text" class="form-control" name="proveedor" placeholder="Ingresar nombre del proveedor">
+    </div>
+    <div class="form-group">
+      <label><b>Disponible:</b></label>
+      <input type="text" class="form-control" name="disponible" placeholder="Ingresar las unidades disponibles">
+    </div>
+    <div class="form-group">
+      <label><b>Valor_Costo:</b></label>
+      <input type="text" class="form-control" name="costo" placeholder="Ingresar  el costo del producto">
+    </div>
+    <div class="form-group">
+      <label><b>Valor_Venta:</b></label>
+      <input type="text" class="form-control" name="venta" placeholder="Ingresar el valor de la venta">
+    </div>
+    <center><button type="submit" class="btn btn-success"><b>Guardar codigo</b></button>        
+    <a class= "btn btn-primary" href="index.html"><b>Pagina Principal</b></a></center>      
+  </form>
+</div>
+</body>
+</html>

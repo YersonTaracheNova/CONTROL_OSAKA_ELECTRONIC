@@ -1,0 +1,33 @@
+.form-group{
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+}
+label{
+    padding: 3px;
+    width: 15%;
+    font-size: 15pt;
+    text-align: center;   
+}
+.form-control{
+    padding: 20px;
+    width: 40%;
+    border: 5px solid #b5ff7d;
+}
+.btnp{
+    display: flex;
+    padding: 15px;
+    justify-content:center;    
+}
+.btn{
+    margin: 10px;
+    padding: 10px;
+}
+.btn:hover{
+    background-color: green;
+}
+body,html{
+    background: #d7f8f7;
+}
+
+

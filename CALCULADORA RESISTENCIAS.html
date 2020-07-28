@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="CSS/EstCalResistencias.css">
+</head>
+<body>
+<div class="container">
+<center><h1>CALCULADORA RESISTENCIAS</h1></center>
+</div>
+<Br></Br>
+<Br></Br>
+<SCript>
+    function RESISTENCIA()
+    {
+        var b1 = document.FrmCalculoResistencias.bandauno.value;
+        var b2 = document.FrmCalculoResistencias.bandados.value;
+        var b3 = document.FrmCalculoResistencias.bandatres.value;
+        var result = document.FrmCalculoResistencias.resultado.value;
+        concat = b1.toString() + b2.toString();
+        result = parseFloat(b3) * parseFloat(concat);
+        document.FrmCalculoResistencias.resultado.value= result;                  
+    }  
+</SCript>
+<div class="container"> 
+  <h2> CALCULO RESISTENCIAS</h2> 
+  <Br></Br>
+  <form class="form-horizontal" name="FrmCalculoResistencias" action="CALCULADORA RESISTENCIAS.html" role="form" method="POST"> 
+    <div class="form-inline"> 
+      <label>1 BANDA :</label> 
+      &nbsp 
+      <select name="bandauno" class="bandauno">                    
+          <option value="0" >NEGRO  </option>
+          <option value="1" >CAFE</option>
+          <option value="2">ROJO  </option>
+          <option value="3">NARANJA</option>
+          <option value="4">AMARILLO</option>
+          <option value="5">VERDE</option>
+          <option value="6">AZUL</option>
+          <option value="7">VIOLETA</option>
+          <option value="8">GRIS</option>
+          <option value="9">BLANCO</option>        
+       </select>      
+    </div> 
+    <Br></Br>  
+    <div class="form-inline"> 
+        <label>2 BANDA :</label> 
+        &nbsp 
+        <select name="bandados" class="bandados">                    
+            <option value="0" >NEGRO  </option>
+            <option value="1" >CAFE</option>
+            <option value="2">ROJO  </option>
+            <option value="3">NARANJA</option>
+            <option value="4">AMARILLO</option>
+            <option value="5">VERDE</option>
+            <option value="6">AZUL</option>
+            <option value="7">VIOLETA</option>
+            <option value="8">GRIS</option>
+            <option value="9">BLANCO</option>        
+         </select>      
+      </div> 
+      <Br></Br> 
+      <div class="form-inline"> 
+        <label>3 BANDA :</label> 
+        &nbsp 
+        <select name="bandatres" class="bandatres">                    
+            <option value="1" >NEGRO  </option>
+            <option value="10" >CAFE</option>
+            <option value="100">ROJO  </option>
+            <option value="1000">NARANJA</option>
+            <option value="10000">AMARILLO</option>
+            <option value="100000">VERDE</option>
+            <option value="1000000">AZUL</option>
+            <option value="10000000">VIOLETA</option>
+            <option value="100000000">GRIS</option>
+            <option value="1000000000">BLANCO</option>        
+         </select>      
+      </div> 
+      <Br></Br>
+      <div class="form-group">
+        <label> RESULTADO CALCULO RESISTENCIAS EN OHMIOS (Ω). </label> 
+        &nbsp
+        <input type="text" class="person_resultado" id="resultado" placeholder="Resultado resistencia" name="resultado">        
+    </div>     
+      <button type="button" name="calculoresistencia" class="btn-resistencia" onclick="RESISTENCIA()">CALCULAR RESISTENCIA</button>   
+      <Br></Br>
+  </form> 
+  <a class= "btn btn-primary" href="index.html"><b>Pagina Principal</b></a> 
+</div>      
+</body>
+</html>
